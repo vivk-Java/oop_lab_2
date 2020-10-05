@@ -21,21 +21,34 @@ public class Main {
         println(b2);
         println(b3);
 
+        println(b3.surface);
+        println(b3.volume);
+
+        b1.width = 3;
+        b1.height = 4.5f;
+        b1.width = 2.2f;
+
+        float b1Surface = b1.surfaceCalc();
+        float b1Volume = b1.volumeCalc();
+
+        println(b1Surface);
+        println(b1Volume);
+
         println("================================================================================");
 
-        Queue<Integer> qInt = new Queue<Integer>();
-        qInt.push(1);
-        qInt.push(2);
-        qInt.push(3);
-        println(qInt);
-        Integer i = qInt.pop();
+        Queue<Integer> qUnlimited = new Queue<Integer>();
+        qUnlimited.push(1);
+        qUnlimited.push(2);
+        qUnlimited.push(3);
+        println(qUnlimited);
+        Integer i = qUnlimited.pop();
         println(i);
-        println(qInt);
+        println(qUnlimited);
 
-        Queue<Integer> qq = new Queue<Integer>(2);
-        qq.push(1);
-        qq.push(2);
-        qq.push(3);
-        println(qq);
+        Queue<Integer> qLimited = new Queue<Integer>(2);
+        qLimited.push(1);
+        qLimited.push(2);
+        qLimited.push(3);
+        println(qLimited);
     }
 }
